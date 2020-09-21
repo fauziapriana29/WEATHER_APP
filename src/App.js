@@ -5,6 +5,7 @@ import 'weather-icons/css/weather-icons-wind.css'
 import Input from './Components/Input/Input'
 import Display from './Components/Display/Main-display/Main-display.jsx'
 import Spinner from './Components/Spinner/Spinner.jsx'
+// import Video from './Components/Video-Background/Video.jsx'
 import './App.css';
 
 function App() {
@@ -25,50 +26,9 @@ function App() {
   const [loading, setLoading] = useState(true)
   const apiKey = "284d0c8d3f216bf0622500d1663147e7"
 
-  // const firstLoad = () => {
-  //   window.navigator.geolocation.getCurrentPosition((position) => {
-  //     const latitude = position.coords.latitude
-  //     const longitude = position.coords.longitude
-  //     axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`).then((respone) => {
-  //       const data = respone.data
-  //     setState({
-  //         city: data.name,
-  //         description: data.weather[0].description,
-  //         temp: Math.floor(data.main.temp - 273.15) ,
-  //         temp_max: Math.floor(data.main.temp_max - 273.15),
-  //         temp_min: Math.floor(data.main.temp_min - 273.15),
-  //         wind_speed: data.wind.speed,
-  //         win_deg: data.wind.deg,
-  //         longitude: data.coord.lon,
-  //         latitude:data.coord.lat,
-  //         icons_id: data.weather[0].id
-  //     })
-  //       console.log(data)
-  //     })
-  //   })
-  // }
-  
-  // const getWeather = (values,e) => {
-  //     const city = values.city
-  //     console.log(city)
-  //   axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`).then((respone) => {
-  //       const data = respone.data
-  //       setState({city: data.name,
-  //                 description: data.weather[0].description,
-  //                 temp: Math.floor(data.main.temp - 273.15) ,
-  //                 temp_max: Math.floor(data.main.temp_max - 273.15),
-  //                 temp_min: Math.floor(data.main.temp_min - 273.15),
-  //                 wind_speed: data.wind.speed,
-  //                 win_deg: data.wind.deg,
-  //                 longitude: data.coord.lon,
-  //                 latitude: data.coord.lat,
-  //                 icons_id: data.weather[0].id
-  //       })
-  //     }).catch((err) => {
-  //       console.log(err)
-  //     })
-  //   e.target.reset()
-  // }
+  // https://tile.openweathermap.org/map/precipitation_new/3/-7.25/112.75.png?appid=284d0c8d3f216bf0622500d1663147e7
+
+
   const getApiWeathers = (values, e) => {
     if (firstLoad === true) {
       window.navigator.geolocation.getCurrentPosition((position) => {
@@ -155,6 +115,7 @@ function App() {
       <div>
         <Input getweaters={getApiWeathers} />
         {setDisplay}
+        {/* <Video/> */}
       </div>
     );
 
