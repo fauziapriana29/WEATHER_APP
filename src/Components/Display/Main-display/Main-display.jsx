@@ -40,20 +40,6 @@ const Display = (props) => {
                 </div>
             </div>  
         </div>
-        // <div className="container main-cont">
-        //     <div className="cont-temp">
-        //         <h1 className='temperature'>{state.temp}&deg;</h1>
-        //     </div>
-        //     <div className="cont-city">
-        //         <h1 className="city">{state.city}</h1>
-        //         <p className="lat">{state.latitude}</p>
-        //         <p className="long">{state.longtitude}</p>
-        //     </div>
-        //     <div className="cont-icons">
-        //         <i className={`wi ${icons} display-1`} />
-        //         <h3 className="desc">{state.description}</h3>
-        //     </div>
-        // </div>
     )
 }
 export default Display

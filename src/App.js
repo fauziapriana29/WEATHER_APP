@@ -5,7 +5,7 @@ import 'weather-icons/css/weather-icons-wind.css'
 import Input from './Components/Input/Input'
 import Display from './Components/Display/Main-display/Main-display.jsx'
 import Spinner from './Components/Spinner/Spinner.jsx'
-// import Video from './Components/Video-Background/Video.jsx'
+import Footege from './Components/images/clouds.mp4'
 import './App.css';
 
 function App() {
@@ -113,6 +113,9 @@ function App() {
   
     return (
       <div>
+        <video className="video" autoPlay loop muted>
+          <source src={Footege} type="video/mp4"/>
+        </video>
         <Input getweaters={getApiWeathers} />
         {setDisplay}
         {/* <Video/> */}

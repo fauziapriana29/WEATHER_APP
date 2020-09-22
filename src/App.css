@@ -4,3 +4,13 @@ body {
   background-size: cover;
   background-position-y: -30px ;
 }
+.video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
